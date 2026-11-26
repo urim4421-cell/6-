@@ -1,0 +1,6 @@
+{
+  "name": "한빛타자 6학년",
+  "description": "2022 개정 교육과정 연계 초등학교 6학년 맞춤형 한글 타자 연습, 산성비·레이싱 게임 및 실시간 교사용 성취도 대시보드",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
