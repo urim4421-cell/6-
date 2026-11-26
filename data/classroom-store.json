@@ -1,0 +1,552 @@
+{
+  "students": [
+    {
+      "id": "stu-6-1-01",
+      "grade": 6,
+      "classNum": 1,
+      "studentNum": 1,
+      "name": "김서연",
+      "totalSessions": 23,
+      "avgCpm": 284,
+      "bestCpm": 342,
+      "avgAccuracy": 97,
+      "shortCompleted": 12,
+      "longCompleted": 6,
+      "gamesPlayed": 5,
+      "bestAcidScore": 1480,
+      "raceWins": 3,
+      "subjectProgress": {
+        "국어": {
+          "sessions": 4,
+          "avgCpm": 295,
+          "avgAccuracy": 97,
+          "completedPassageIds": [
+            "long-kor-1",
+            "long-kor-2"
+          ],
+          "masteredWords": [
+            "비유적표현",
+            "직유법",
+            "타당한근거"
+          ]
+        },
+        "수학": {
+          "sessions": 3,
+          "avgCpm": 272,
+          "avgAccuracy": 96,
+          "completedPassageIds": [
+            "long-mat-1",
+            "long-mat-2"
+          ],
+          "masteredWords": [
+            "원주율",
+            "비례배분",
+            "백분율"
+          ]
+        },
+        "사회": {
+          "sessions": 3,
+          "avgCpm": 286,
+          "avgAccuracy": 97,
+          "completedPassageIds": [
+            "long-soc-1"
+          ],
+          "masteredWords": [
+            "민주주의",
+            "삼권분립",
+            "지속가능발전"
+          ]
+        },
+        "과학": {
+          "sessions": 3,
+          "avgCpm": 281,
+          "avgAccuracy": 97,
+          "completedPassageIds": [
+            "long-sci-1"
+          ],
+          "masteredWords": [
+            "광합성",
+            "증산작용",
+            "이산화탄소"
+          ]
+        }
+      },
+      "currentActivity": {
+        "mode": "IDLE",
+        "subject": "전체",
+        "liveCpm": 0,
+        "liveAccuracy": 100,
+        "updatedAt": 1795675287463
+      },
+      "lastActiveAt": "2026-11-26T06:41:27.463Z"
+    },
+    {
+      "id": "stu-6-1-02",
+      "grade": 6,
+      "classNum": 1,
+      "studentNum": 2,
+      "name": "박준호",
+      "totalSessions": 19,
+      "avgCpm": 246,
+      "bestCpm": 298,
+      "avgAccuracy": 95,
+      "shortCompleted": 9,
+      "longCompleted": 4,
+      "gamesPlayed": 6,
+      "bestAcidScore": 1320,
+      "raceWins": 2,
+      "subjectProgress": {
+        "국어": {
+          "sessions": 5,
+          "avgCpm": 254,
+          "avgAccuracy": 95,
+          "completedPassageIds": [
+            "long-kor-1"
+          ],
+          "masteredWords": [
+            "비유적표현",
+            "직유법",
+            "타당한근거"
+          ]
+        },
+        "수학": {
+          "sessions": 4,
+          "avgCpm": 240,
+          "avgAccuracy": 94,
+          "completedPassageIds": [
+            "long-mat-1"
+          ],
+          "masteredWords": [
+            "원주율",
+            "비례배분",
+            "백분율"
+          ]
+        },
+        "사회": {
+          "sessions": 3,
+          "avgCpm": 248,
+          "avgAccuracy": 95,
+          "completedPassageIds": [
+            "long-soc-1"
+          ],
+          "masteredWords": [
+            "민주주의",
+            "삼권분립",
+            "지속가능발전"
+          ]
+        },
+        "과학": {
+          "sessions": 4,
+          "avgCpm": 242,
+          "avgAccuracy": 95,
+          "completedPassageIds": [
+            "long-sci-2"
+          ],
+          "masteredWords": [
+            "광합성",
+            "증산작용",
+            "이산화탄소"
+          ]
+        }
+      },
+      "currentActivity": {
+        "mode": "IDLE",
+        "subject": "전체",
+        "liveCpm": 0,
+        "liveAccuracy": 100,
+        "updatedAt": 1795675107463
+      },
+      "lastActiveAt": "2026-11-26T06:38:27.463Z"
+    },
+    {
+      "id": "stu-6-1-03",
+      "grade": 6,
+      "classNum": 1,
+      "studentNum": 3,
+      "name": "이도윤",
+      "totalSessions": 30,
+      "avgCpm": 318,
+      "bestCpm": 376,
+      "avgAccuracy": 98,
+      "shortCompleted": 15,
+      "longCompleted": 8,
+      "gamesPlayed": 7,
+      "bestAcidScore": 1850,
+      "raceWins": 5,
+      "subjectProgress": {
+        "국어": {
+          "sessions": 6,
+          "avgCpm": 325,
+          "avgAccuracy": 98,
+          "completedPassageIds": [
+            "long-kor-1",
+            "long-kor-2",
+            "long-kor-3"
+          ],
+          "masteredWords": [
+            "비유적표현",
+            "직유법",
+            "타당한근거"
+          ]
+        },
+        "수학": {
+          "sessions": 3,
+          "avgCpm": 312,
+          "avgAccuracy": 97,
+          "completedPassageIds": [
+            "long-mat-1",
+            "long-mat-2"
+          ],
+          "masteredWords": [
+            "원주율",
+            "비례배분",
+            "백분율"
+          ]
+        },
+        "사회": {
+          "sessions": 3,
+          "avgCpm": 315,
+          "avgAccuracy": 98,
+          "completedPassageIds": [
+            "long-soc-1",
+            "long-soc-2"
+          ],
+          "masteredWords": [
+            "민주주의",
+            "삼권분립",
+            "지속가능발전"
+          ]
+        },
+        "과학": {
+          "sessions": 3,
+          "avgCpm": 320,
+          "avgAccuracy": 98,
+          "completedPassageIds": [
+            "long-sci-1"
+          ],
+          "masteredWords": [
+            "광합성",
+            "증산작용",
+            "이산화탄소"
+          ]
+        }
+      },
+      "currentActivity": {
+        "mode": "IDLE",
+        "subject": "전체",
+        "liveCpm": 0,
+        "liveAccuracy": 100,
+        "updatedAt": 1795674927463
+      },
+      "lastActiveAt": "2026-11-26T06:35:27.463Z"
+    },
+    {
+      "id": "stu-6-1-04",
+      "grade": 6,
+      "classNum": 1,
+      "studentNum": 4,
+      "name": "최하은",
+      "totalSessions": 14,
+      "avgCpm": 212,
+      "bestCpm": 256,
+      "avgAccuracy": 94,
+      "shortCompleted": 7,
+      "longCompleted": 3,
+      "gamesPlayed": 4,
+      "bestAcidScore": 960,
+      "raceWins": 1,
+      "subjectProgress": {
+        "국어": {
+          "sessions": 4,
+          "avgCpm": 224,
+          "avgAccuracy": 94,
+          "completedPassageIds": [
+            "long-kor-1"
+          ],
+          "masteredWords": [
+            "비유적표현",
+            "직유법",
+            "타당한근거"
+          ]
+        },
+        "수학": {
+          "sessions": 4,
+          "avgCpm": 205,
+          "avgAccuracy": 93,
+          "completedPassageIds": [
+            "long-mat-1"
+          ],
+          "masteredWords": [
+            "원주율",
+            "비례배분",
+            "백분율"
+          ]
+        },
+        "사회": {
+          "sessions": 3,
+          "avgCpm": 210,
+          "avgAccuracy": 94,
+          "completedPassageIds": [],
+          "masteredWords": [
+            "민주주의",
+            "삼권분립",
+            "지속가능발전"
+          ]
+        },
+        "과학": {
+          "sessions": 4,
+          "avgCpm": 208,
+          "avgAccuracy": 94,
+          "completedPassageIds": [
+            "long-sci-1"
+          ],
+          "masteredWords": [
+            "광합성",
+            "증산작용",
+            "이산화탄소"
+          ]
+        }
+      },
+      "currentActivity": {
+        "mode": "IDLE",
+        "subject": "전체",
+        "liveCpm": 0,
+        "liveAccuracy": 100,
+        "updatedAt": 1795674747463
+      },
+      "lastActiveAt": "2026-11-26T06:32:27.463Z"
+    },
+    {
+      "id": "stu-6-1-05",
+      "grade": 6,
+      "classNum": 1,
+      "studentNum": 5,
+      "name": "정우진",
+      "totalSessions": 11,
+      "avgCpm": 194,
+      "bestCpm": 235,
+      "avgAccuracy": 92,
+      "shortCompleted": 6,
+      "longCompleted": 2,
+      "gamesPlayed": 3,
+      "bestAcidScore": 820,
+      "raceWins": 0,
+      "subjectProgress": {
+        "국어": {
+          "sessions": 5,
+          "avgCpm": 202,
+          "avgAccuracy": 92,
+          "completedPassageIds": [
+            "long-kor-1"
+          ],
+          "masteredWords": [
+            "비유적표현",
+            "직유법",
+            "타당한근거"
+          ]
+        },
+        "수학": {
+          "sessions": 3,
+          "avgCpm": 188,
+          "avgAccuracy": 91,
+          "completedPassageIds": [],
+          "masteredWords": [
+            "원주율",
+            "비례배분",
+            "백분율"
+          ]
+        },
+        "사회": {
+          "sessions": 3,
+          "avgCpm": 195,
+          "avgAccuracy": 92,
+          "completedPassageIds": [
+            "long-soc-1"
+          ],
+          "masteredWords": [
+            "민주주의",
+            "삼권분립",
+            "지속가능발전"
+          ]
+        },
+        "과학": {
+          "sessions": 3,
+          "avgCpm": 191,
+          "avgAccuracy": 92,
+          "completedPassageIds": [],
+          "masteredWords": [
+            "광합성",
+            "증산작용",
+            "이산화탄소"
+          ]
+        }
+      },
+      "currentActivity": {
+        "mode": "IDLE",
+        "subject": "전체",
+        "liveCpm": 0,
+        "liveAccuracy": 100,
+        "updatedAt": 1795674567463
+      },
+      "lastActiveAt": "2026-11-26T06:29:27.463Z"
+    },
+    {
+      "id": "stu-6-1-06",
+      "grade": 6,
+      "classNum": 1,
+      "studentNum": 6,
+      "name": "강지민",
+      "totalSessions": 19,
+      "avgCpm": 265,
+      "bestCpm": 310,
+      "avgAccuracy": 96,
+      "shortCompleted": 10,
+      "longCompleted": 5,
+      "gamesPlayed": 4,
+      "bestAcidScore": 1410,
+      "raceWins": 2,
+      "subjectProgress": {
+        "국어": {
+          "sessions": 6,
+          "avgCpm": 274,
+          "avgAccuracy": 96,
+          "completedPassageIds": [
+            "long-kor-1",
+            "long-kor-2"
+          ],
+          "masteredWords": [
+            "비유적표현",
+            "직유법",
+            "타당한근거"
+          ]
+        },
+        "수학": {
+          "sessions": 4,
+          "avgCpm": 258,
+          "avgAccuracy": 95,
+          "completedPassageIds": [
+            "long-mat-2"
+          ],
+          "masteredWords": [
+            "원주율",
+            "비례배분",
+            "백분율"
+          ]
+        },
+        "사회": {
+          "sessions": 3,
+          "avgCpm": 264,
+          "avgAccuracy": 96,
+          "completedPassageIds": [
+            "long-soc-1"
+          ],
+          "masteredWords": [
+            "민주주의",
+            "삼권분립",
+            "지속가능발전"
+          ]
+        },
+        "과학": {
+          "sessions": 4,
+          "avgCpm": 263,
+          "avgAccuracy": 96,
+          "completedPassageIds": [
+            "long-sci-1"
+          ],
+          "masteredWords": [
+            "광합성",
+            "증산작용",
+            "이산화탄소"
+          ]
+        }
+      },
+      "currentActivity": {
+        "mode": "IDLE",
+        "subject": "전체",
+        "liveCpm": 0,
+        "liveAccuracy": 100,
+        "updatedAt": 1795674387463
+      },
+      "lastActiveAt": "2026-11-26T06:26:27.463Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "ses-seed-1",
+      "studentId": "stu-6-1-03",
+      "studentName": "이도윤",
+      "mode": "LONG",
+      "subject": "과학",
+      "itemTitle": "2단원. 식물의 구조와 광합성 작용",
+      "cpm": 320,
+      "maxCpm": 368,
+      "accuracy": 98,
+      "durationSec": 48,
+      "score": 320,
+      "wordsLearned": [
+        "광합성",
+        "증산작용",
+        "엽록체",
+        "이산화탄소"
+      ],
+      "createdAt": "2026-11-26T06:37:27.463Z"
+    },
+    {
+      "id": "ses-seed-2",
+      "studentId": "stu-6-1-01",
+      "studentName": "김서연",
+      "mode": "ACID_RAIN",
+      "subject": "사회",
+      "itemTitle": "산성비 2022 교과 단어 방어",
+      "cpm": 288,
+      "maxCpm": 334,
+      "accuracy": 97,
+      "durationSec": 65,
+      "score": 1480,
+      "wordsLearned": [
+        "민주주의",
+        "삼권분립",
+        "지속가능발전"
+      ],
+      "createdAt": "2026-11-26T06:33:07.463Z"
+    },
+    {
+      "id": "ses-seed-3",
+      "studentId": "stu-6-1-06",
+      "studentName": "강지민",
+      "mode": "RACING",
+      "subject": "수학",
+      "itemTitle": "교실 실시간 레이싱 대결",
+      "cpm": 274,
+      "maxCpm": 310,
+      "accuracy": 96,
+      "durationSec": 42,
+      "score": 1,
+      "wordsLearned": [
+        "원주율",
+        "비례배분",
+        "직육면체"
+      ],
+      "createdAt": "2026-11-26T06:28:37.463Z"
+    },
+    {
+      "id": "ses-seed-4",
+      "studentId": "stu-6-1-02",
+      "studentName": "박준호",
+      "mode": "SHORT",
+      "subject": "국어",
+      "itemTitle": "2단계 도약 단문 연습",
+      "cpm": 254,
+      "maxCpm": 290,
+      "accuracy": 95,
+      "durationSec": 34,
+      "score": 254,
+      "wordsLearned": [
+        "직유법",
+        "타당한근거"
+      ],
+      "createdAt": "2026-11-26T06:22:47.463Z"
+    }
+  ],
+  "customPassages": []
+}

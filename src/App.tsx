@@ -213,10 +213,54 @@ export default function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ classNum, startNum, entries }),
       });
-      if (!res.ok) throw new Error('명단 등록 실패');
-      const data = (await res.json()) as { addedCount: number; students: StudentProfile[] };
-      setStudents(data.students);
-      return data.addedCount;
+
+      if (res.status === 404) {
+        // Fallback to single-student registration endpoint if needed
+        let nextNum = Math.max(1, Number(startNum) || 1);
+        let added = 0;
+        for (const item of entries) {
+          const cleanName = item.name.trim();
+          if (!cleanName) continue;
+          const studentNum =
+            item.studentNum && item.studentNum > 0 ? item.studentNum : nextNum++;
+          const singleRes = await fetch('/api/students', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ classNum, studentNum, name: cleanName }),
+          });
+          if (singleRes.ok) {
+            const singleData = (await singleRes.json()) as { student: StudentProfile };
+            setStudents((prev) =>
+              prev.some((s) => s.id === singleData.student.id)
+                ? prev
+                : [...prev, singleData.student]
+            );
+            added += 1;
+          }
+        }
+        return added;
+      }
+
+      const rawText = await res.text();
+      let parsed: { addedCount?: number; students?: StudentProfile[]; error?: string } = {};
+      try {
+        parsed = JSON.parse(rawText) as {
+          addedCount?: number;
+          students?: StudentProfile[];
+          error?: string;
+        };
+      } catch {
+        // Non-JSON response
+      }
+
+      if (!res.ok) {
+        throw new Error(parsed.error || `명단 등록 실패 (HTTP ${res.status})`);
+      }
+
+      if (Array.isArray(parsed.students)) {
+        setStudents(parsed.students);
+      }
+      return parsed.addedCount ?? 0;
     },
     []
   );

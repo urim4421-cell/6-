@@ -249,19 +249,42 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   };
 
   const parsedBulkEntries = useMemo(() => {
-    const tokens = bulkText
-      .split(/[\n,]+/)
+    const lines = bulkText
+      .split(/\r?\n/)
       .map((line) => line.trim())
       .filter(Boolean);
-    return tokens
-      .map((line) => {
-        const match = line.match(/^(\d+)\s*[.)번]?\s*(.+)$/);
-        if (match) {
-          return { studentNum: Number(match[1]), name: match[2].trim() };
-        }
-        return { name: line };
-      })
-      .filter((entry) => entry.name.length > 0);
+
+    const results: Array<{ studentNum?: number; name: string }> = [];
+    for (const line of lines) {
+      // Handle "1\t홍길동" or "1, 홍길동" or "1. 홍길동" or "1번 홍길동" or "1 홍길동"
+      const tabOrNumMatch = line.match(/^(\d+)\s*[.)번,\t]\s*([^\d,\t].*)$/);
+      if (tabOrNumMatch) {
+        results.push({
+          studentNum: Number(tabOrNumMatch[1]),
+          name: tabOrNumMatch[2].trim(),
+        });
+        continue;
+      }
+
+      const spaceNumMatch = line.match(/^(\d+)\s+([^\d].*)$/);
+      if (spaceNumMatch) {
+        results.push({
+          studentNum: Number(spaceNumMatch[1]),
+          name: spaceNumMatch[2].trim(),
+        });
+        continue;
+      }
+
+      // Otherwise split comma-separated names on a single line (e.g. "김철수, 이영희")
+      const commaNames = line
+        .split(',')
+        .map((n) => n.trim())
+        .filter((n) => n.length > 0 && !/^\d+$/.test(n));
+      for (const name of commaNames) {
+        results.push({ name });
+      }
+    }
+    return results;
   }, [bulkText]);
 
   const rosterClasses = useMemo(() => {
@@ -294,8 +317,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           ? `${singleClassNum}반 ${singleStudentNum}번 학생이 명단에 추가되었습니다.`
           : '이미 동일한 반·번호·이름의 학생이 등록되어 있습니다.'
       );
-    } catch {
-      setRosterFeedback('학생 등록 중 오류가 발생했습니다.');
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : '';
+      setRosterFeedback(msg ? `학생 등록 오류: ${msg}` : '학생 등록 중 오류가 발생했습니다.');
     } finally {
       setRosterSaving(false);
     }
@@ -317,8 +341,9 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
           ? `${bulkClassNum}반 학생 ${added}명이 명단에 일괄 등록되었습니다.`
           : '새로 추가된 학생이 없습니다 (중복 명단 제외).'
       );
-    } catch {
-      setRosterFeedback('일괄 등록 중 오류가 발생했습니다.');
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : '';
+      setRosterFeedback(msg ? `일괄 등록 오류: ${msg}` : '일괄 등록 중 오류가 발생했습니다.');
     } finally {
       setRosterSaving(false);
     }

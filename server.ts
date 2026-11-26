@@ -359,7 +359,11 @@ function broadcastAll(payload: unknown): void {
   const msg = JSON.stringify(payload);
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
-      client.send(msg);
+      try {
+        client.send(msg);
+      } catch {
+        // Ignore individual broken socket sends
+      }
     }
   });
 }
@@ -532,8 +536,21 @@ app.post('/api/students/bulk', (req, res) => {
   for (const item of entries.slice(0, 60)) {
     const cleanName = typeof item.name === 'string' ? item.name.trim().slice(0, 20) : '';
     if (!cleanName) continue;
-    const assignedNum =
-      item.studentNum && Number(item.studentNum) > 0 ? Number(item.studentNum) : nextNum++;
+
+    let assignedNum: number;
+    if (item.studentNum && Number(item.studentNum) > 0) {
+      assignedNum = Number(item.studentNum);
+    } else {
+      // Skip numbers already taken in this class unless the exact name is already present
+      const sameNameExists = store.students.some(
+        (s) => s.classNum === cleanClass && s.name === cleanName
+      );
+      if (sameNameExists) continue;
+      while (store.students.some((s) => s.classNum === cleanClass && s.studentNum === nextNum)) {
+        nextNum += 1;
+      }
+      assignedNum = nextNum++;
+    }
 
     const duplicate = store.students.some(
       (s) => s.classNum === cleanClass && s.studentNum === assignedNum && s.name === cleanName
